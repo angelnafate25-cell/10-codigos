@@ -1,0 +1,47 @@
+Problema 4: Reemplazar negativos por 0
+1. Fase de Diseño (Pseudocódigo)
+Inicio
+    Declarar N de entero
+    Escribir "Tamaño del arreglo N:"
+    Leer N
+    Declarar arreglo A[N] de entero
+    
+    Para i = 0 Hasta N - 1 Con Paso 1 Hacer
+        Escribir "Ingrese un número:"
+        Leer A[i]
+        Si A[i] < 0 Entonces
+            A[i] = 0
+        FinSi
+    FinPara
+    
+    Escribir "Arreglo resultante:"
+    Para i = 0 Hasta N - 1 Con Paso 1 Hacer
+        Escribir A[i]
+    FinPara
+Fin
+
+2. Fase de Implementación (Código en C++) 
+#include <iostream>
+using namespace std;
+
+int main() {
+    int N;
+    cout << "Ingrese el tamaño N: ";
+    cin >> N;
+
+    int A[N];
+    for (int i = 0; i < N; i++) {
+        cout << "Elemento " << i << ": ";
+        cin >> A[i];
+        if (A[i] < 0) {
+            A[i] = 0;
+        }
+    }
+
+    cout << "Arreglo modificado: ";
+    for (int i = 0; i < N; i++) {
+        cout << A[i] << " ";
+    }
+    cout << endl;
+    return 0;
+}
