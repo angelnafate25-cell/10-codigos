@@ -1,0 +1,47 @@
+Problema 7: Contar repeticiones de X en arreglo de 10 elementos
+Fase de Diseño (Pseudocódigo)
+Inicio
+    Declarar arreglo numeros[10] de entero
+    Declarar X, contador = 0 de entero
+    
+    Para i = 0 Hasta 9 Con Paso 1 Hacer
+        Escribir "Ingrese número:"
+        Leer numeros[i]
+    FinPara
+    
+    Escribir "Ingrese valor X a contar:"
+    Leer X
+    
+    Para i = 0 Hasta 9 Con Paso 1 Hacer
+        Si numeros[i] == X Entonces
+            contador = contador + 1
+        FinSi
+    FinPara
+    
+    Escribir "El valor X se repite ", contador, " veces."
+Fin
+
+2. Fase de Implementación (Código en C++)
+#include <iostream>
+using namespace std;
+
+int main() {
+    int numeros[10], X, contador = 0;
+
+    for (int i = 0; i < 10; i++) {
+        cout << "Elemento " << i << ": ";
+        cin >> numeros[i];
+    }
+
+    cout << "Ingrese X: ";
+    cin >> X;
+
+    for (int i = 0; i < 10; i++) {
+        if (numeros[i] == X) {
+            contador++;
+        }
+    }
+
+    cout << "El valor " << X << " se repite " << contador << " veces." << endl;
+    return 0;
+}
