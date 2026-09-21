@@ -1,0 +1,48 @@
+Problema 8: Suma elemento a elemento C[i] = A[i] + B[i]
+Fase de Diseño (Pseudocódigo)
+Inicio
+    Declarar N de entero
+    Escribir "Ingrese tamaño N:"
+    Leer N
+    Declarar arreglos A[N], B[N], C[N] de entero
+    
+    Para i = 0 Hasta N - 1 Con Paso 1 Hacer
+        Escribir "Ingrese A[", i, "]:"
+        Leer A[i]
+        Escribir "Ingrese B[", i, "]:"
+        Leer B[i]
+        C[i] = A[i] + B[i]
+    FinPara
+    
+    Escribir "Arreglo resultante C:"
+    Para i = 0 Hasta N - 1 Con Paso 1 Hacer
+        Escribir C[i]
+    FinPara
+Fin
+
+Fase de Implementación (Código en C++)
+#include <iostream>
+using namespace std;
+
+int main() {
+    int N;
+    cout << "Ingrese el tamaño N: ";
+    cin >> N;
+
+    int A[N], B[N], C[N];
+
+    for (int i = 0; i < N; i++) {
+        cout << "A[" << i << "]: ";
+        cin >> A[i];
+        cout << "B[" << i << "]: ";
+        cin >> B[i];
+        C[i] = A[i] + B[i];
+    }
+
+    cout << "Arreglo C (A + B): ";
+    for (int i = 0; i < N; i++) {
+        cout << C[i] << " ";
+    }
+    cout << endl;
+    return 0;
+}
