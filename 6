@@ -1,0 +1,59 @@
+Problema 6: Presencia de un valor X en arreglo de 10 elementos
+1. Fase de Diseño (Pseudocódigo)
+Inicio
+    Declarar arreglo datos[10] de entero
+    Declarar X de entero
+    Declarar encontrado = Falso de booleano
+    
+    Para i = 0 Hasta 9 Con Paso 1 Hacer
+        Escribir "Ingrese número:"
+        Leer datos[i]
+    FinPara
+    
+    Escribir "Ingrese el número a buscar (X):"
+    Leer X
+    
+    Para i = 0 Hasta 9 Con Paso 1 Hacer
+        Si datos[i] == X Entonces
+            encontrado = Verdadero
+        FinSi
+    FinPara
+    
+    Si encontrado == Verdadero Entonces
+        Escribir "El número X está presente en el arreglo."
+    Sino
+        Escribir "El número X NO está presente en el arreglo."
+    FinSi
+Fin
+
+2. Fase de Implementación (Código en C++) 
+#include <iostream>
+using namespace std;
+
+int main() {
+    int datos[10], X;
+    bool encontrado = false;
+
+    for (int i = 0; i < 10; i++) {
+        cout << "Elemento " << i << ": ";
+        cin >> datos[i];
+    }
+
+    cout << "Ingrese numero a buscar X: ";
+    cin >> X;
+
+    for (int i = 0; i < 10; i++) {
+        if (datos[i] == X) {
+            encontrado = true;
+            break;
+        }
+    }
+
+    if (encontrado) {
+        cout << "El numero " << X << " SI esta presente." << endl;
+    } else {
+        cout << "El numero " << X << " NO esta presente." << endl;
+    }
+
+    return 0;
+}
