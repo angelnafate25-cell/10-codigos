@@ -1,0 +1,55 @@
+Problema 10: Intercambiar el primer y último elemento de un arreglo de N posiciones
+Fase de Diseño (Pseudocódigo)
+Inicio
+    Declarar N de entero
+    Escribir "Ingrese tamaño N:"
+    Leer N
+    Declarar arreglo A[N] de entero
+    Declarar aux de entero
+    
+    Para i = 0 Hasta N - 1 Con Paso 1 Hacer
+        Escribir "Ingrese elemento:"
+        Leer A[i]
+    FinPara
+    
+    // Intercambio si el arreglo tiene al menos 2 elementos
+    Si N > 1 Entonces
+        aux = A[0]
+        A[0] = A[N - 1]
+        A[N - 1] = aux
+    FinSi
+    
+    Escribir "Arreglo con el primer y ultimo elemento intercambiados:"
+    Para i = 0 Hasta N - 1 Con Paso 1 Hacer
+        Escribir A[i]
+    FinPara
+Fin
+
+2. Fase de Implementación (Código en C++)
+#include <iostream>
+using namespace std;
+
+int main() {
+    int N;
+    cout << "Ingrese el tamaño N: ";
+    cin >> N;
+
+    int A[N];
+    for (int i = 0; i < N; i++) {
+        cout << "A[" << i << "]: ";
+        cin >> A[i];
+    }
+
+    if (N > 1) {
+        int aux = A[0];
+        A[0] = A[N - 1];
+        A[N - 1] = aux;
+    }
+
+    cout << "Arreglo tras intercambio: ";
+    for (int i = 0; i < N; i++) {
+        cout << A[i] << " ";
+    }
+    cout << endl;
+    return 0;
+}
