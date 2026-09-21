@@ -1,0 +1,44 @@
+Problema 3: Copiar arreglo A en arreglo B
+1. Fase de Diseño (Pseudocódigo) 
+Inicio
+    Declarar arreglos A[10], B[10] de entero
+    
+    Para i = 0 Hasta 9 Con Paso 1 Hacer
+        Escribir "Ingrese valor para A[", i, "]:"
+        Leer A[i]
+    FinPara
+    
+    Para i = 0 Hasta 9 Con Paso 1 Hacer
+        B[i] = A[i]
+    FinPara
+    
+    Escribir "Elementos copiados en B:"
+    Para i = 0 Hasta 9 Con Paso 1 Hacer
+        Escribir B[i]
+    FinPara
+Fin
+
+2.Fase de Implementación (Código en C++
+#include <iostream>
+using namespace std;
+
+int main() {
+    int A[10], B[10];
+
+    for (int i = 0; i < 10; i++) {
+        cout << "A[" << i << "]: ";
+        cin >> A[i];
+    }
+
+    for (int i = 0; i < 10; i++) {
+        B[i] = A[i];
+    }
+
+    cout << "Arreglo B: ";
+    for (int i = 0; i < 10; i++) {
+        cout << B[i] << " ";
+    }
+    cout << endl;
+    return 0;
+}
+ 
