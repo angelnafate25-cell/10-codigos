@@ -1,0 +1,38 @@
+Problema 9: Sumar elementos en posiciones (índices) pares
+Fase de Diseño (Pseudocódigo)
+Inicio
+    Declarar arreglo datos[10] de entero
+    Declarar sumaPares = 0 de entero
+    
+    Para i = 0 Hasta 9 Con Paso 1 Hacer
+        Escribir "Ingrese número:"
+        Leer datos[i]
+    FinPara
+    
+    Para i = 0 Hasta 9 Con Paso 2 Hacer
+        sumaPares = sumaPares + datos[i]
+    FinPara
+    
+    Escribir "La suma de elementos en posiciones pares es: ", sumaPares
+Fin
+
+2. Fase de Implementación (Código en C++)
+#include <iostream>
+using namespace std;
+
+int main() {
+    int datos[10];
+    int sumaPares = 0;
+
+    for (int i = 0; i < 10; i++) {
+        cout << "Dato [" << i << "]: ";
+        cin >> datos[i];
+    }
+
+    for (int i = 0; i < 10; i += 2) {
+        sumaPares += datos[i];
+    }
+
+    cout << "La suma en indices pares (0,2,4,6,8) es: " << sumaPares << endl;
+    return 0;
+}
